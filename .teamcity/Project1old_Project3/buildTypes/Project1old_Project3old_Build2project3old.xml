@@ -10,7 +10,7 @@
       <vcs-entry-ref root-id="Project1old_Root1old">
         <checkout-rule rule="+:. =&gt; .root1" />
       </vcs-entry-ref>
-      <vcs-entry-ref root-id="Project1old_Root2old">
+      <vcs-entry-ref root-id="Project1old_Root2">
         <checkout-rule rule="+:. =&gt; .root2" />
       </vcs-entry-ref>
     </vcs-settings>
