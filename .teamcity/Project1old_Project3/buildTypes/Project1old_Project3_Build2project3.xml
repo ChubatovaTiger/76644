@@ -17,27 +17,27 @@
     <requirements />
     <build-triggers />
     <artifact-dependencies>
-      <dependency id="ARTIFACT_DEPENDENCY_1" sourceBuildTypeId="Project1old_Project2old_Build1project2old" cleanDestination="false">
+      <dependency id="ARTIFACT_DEPENDENCY_1" sourceBuildTypeId="Project1old_Project2_Build1project2" cleanDestination="false">
         <revisionRule name="sameChainOrLastFinished" revision="latest.sameChainOrLastFinished" />
         <artifact sourcePath="+:.teamcity/logs/* =&gt; ." />
       </dependency>
     </artifact-dependencies>
     <dependencies>
-      <depend-on sourceBuildTypeId="Project1old_Project2old_Build1project2old">
+      <depend-on sourceBuildTypeId="Project1old_Project2_Build1project2">
         <options>
           <option name="run-build-if-dependency-failed" value="RUN_ADD_PROBLEM" />
           <option name="take-started-build-with-same-revisions" value="true" />
           <option name="take-successful-builds-only" value="true" />
         </options>
       </depend-on>
-      <depend-on sourceBuildTypeId="Project1old_Project2old_Project22old_Build1project22old">
+      <depend-on sourceBuildTypeId="Project1old_Project2_Project22_Build1project22">
         <options>
           <option name="run-build-if-dependency-failed" value="RUN_ADD_PROBLEM" />
           <option name="take-started-build-with-same-revisions" value="true" />
           <option name="take-successful-builds-only" value="true" />
         </options>
       </depend-on>
-      <depend-on sourceBuildTypeId="Project1old_Project3old_Build1project3old">
+      <depend-on sourceBuildTypeId="Project1old_Project3_Build1project3">
         <options>
           <option name="run-build-if-dependency-failed" value="RUN_ADD_PROBLEM" />
           <option name="take-started-build-with-same-revisions" value="true" />
