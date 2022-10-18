@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="5e11500d-f9f8-4b83-bce1-1ffc4b380dbc" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2021.1/project-config.xsd">
+  <name>build2project3</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners />
+    <vcs-settings>
+      <vcs-entry-ref root-id="Project1old_Project3old_Root3old" />
+      <vcs-entry-ref root-id="Project1old_Root1old">
+        <checkout-rule rule="+:. =&gt; .root1" />
+      </vcs-entry-ref>
+      <vcs-entry-ref root-id="Project1old_Root2old">
+        <checkout-rule rule="+:. =&gt; .root2" />
+      </vcs-entry-ref>
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <artifact-dependencies>
+      <dependency id="ARTIFACT_DEPENDENCY_1" sourceBuildTypeId="Project1old_Project2old_Build1project2old" cleanDestination="false">
+        <revisionRule name="sameChainOrLastFinished" revision="latest.sameChainOrLastFinished" />
+        <artifact sourcePath="+:.teamcity/logs/* =&gt; ." />
+      </dependency>
+    </artifact-dependencies>
+    <dependencies>
+      <depend-on sourceBuildTypeId="Project1old_Project2old_Build1project2old">
+        <options>
+          <option name="run-build-if-dependency-failed" value="RUN_ADD_PROBLEM" />
+          <option name="take-started-build-with-same-revisions" value="true" />
+          <option name="take-successful-builds-only" value="true" />
+        </options>
+      </depend-on>
+      <depend-on sourceBuildTypeId="Project1old_Project2old_Project22old_Build1project22old">
+        <options>
+          <option name="run-build-if-dependency-failed" value="RUN_ADD_PROBLEM" />
+          <option name="take-started-build-with-same-revisions" value="true" />
+          <option name="take-successful-builds-only" value="true" />
+        </options>
+      </depend-on>
+      <depend-on sourceBuildTypeId="Project1old_Project3old_Build1project3old">
+        <options>
+          <option name="run-build-if-dependency-failed" value="RUN_ADD_PROBLEM" />
+          <option name="take-started-build-with-same-revisions" value="true" />
+          <option name="take-successful-builds-only" value="true" />
+        </options>
+      </depend-on>
+    </dependencies>
+    <cleanup />
+  </settings>
+</build-type>
+
