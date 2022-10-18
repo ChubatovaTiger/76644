@@ -6,8 +6,8 @@
     <parameters />
     <build-runners />
     <vcs-settings>
-      <vcs-entry-ref root-id="Project1old_Root1old" />
-      <vcs-entry-ref root-id="Project1old_Vsold">
+      <vcs-entry-ref root-id="Project1old_Root1" />
+      <vcs-entry-ref root-id="Project1old_Vs">
         <checkout-rule rule="+:. =&gt; .vs" />
       </vcs-entry-ref>
     </vcs-settings>
